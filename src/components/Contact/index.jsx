@@ -81,13 +81,13 @@ const Contact = () => {
 <div className="contact__socials">
   <p className="text__muted">Connect with us:</p>
   <div className="social__links">
-    <a href="https://t.me/yourchannel" target="_blank" rel="noreferrer">
+    <a href="https://t.me/Quantumpipsseekerscommunity" target="_blank" rel="noreferrer">
       <FaTelegramPlane /> Telegram
     </a>
-    <a href="https://instagram.com/yourpage" target="_blank" rel="noreferrer">
+    <a href="https://www.instagram.com/quantumpipsseekers?igsh=NTc5bTA2bHFybzJy&utm_source=qr" target="_blank" rel="noreferrer">
       <FaInstagram /> Instagram
     </a>
-    <a href="https://wa.me/234XXXXXXXXXX" target="_blank" rel="noreferrer">
+    <a href="https://wa.me/2349120810735" target="_blank" rel="noreferrer">
       <FaWhatsapp /> WhatsApp
     </a>
   </div>

@@ -73,7 +73,7 @@ const About = () => {
           </div>
           <p className="text__muted description">
             Welcome to <strong>Quantum Pips Seekers</strong> – where precision meets profit. 
-            We are a fast-growing community of passionate forex traders dedicated 
+            We are a fast-growing community of passionate traders dedicated 
             to unlocking consistent market opportunities through smart strategies,
              technical mastery, and real-time insights. Our mission is to empower 
              both beginners and seasoned traders with expert analysis, quality signals,

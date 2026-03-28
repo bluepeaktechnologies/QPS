@@ -20,7 +20,7 @@ export const navTabs = [
 
 export const services = [
   {
-    name:" Forex Trading Education",
+    name:" Digital Trading Education",
     icon:<SiBlueprint/>,
     description:`Build strong trading skills through our structured forex 
     training program. Learn chart analysis, risk control, market psychology, 
