@@ -1,197 +1,221 @@
-/* ===== SECTION BASE STYLES ===== */
-#project.community__section {
-  padding: 4rem 2rem;
-  background: var(--color-bg);
-  color: var(--color-white);
+.community__section {
+  padding: 160px 20px 180px;
+  background: linear-gradient(145deg, #0a0a0f 0%, #12121f 40%, #1a1a2e 100%);
   position: relative;
   overflow: hidden;
-  text-align: center;
+  color: #fff;
 }
 
-/* ===== BACKGROUND ILLUSTRATION (OPTIONAL) ===== */
-#project.community__section::before {
-  content: '';
+/* Floating Particles */
+.floating-particles {
   position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle at center, rgba(212, 175, 55, 0.2), transparent);
-  z-index: 0;
-}
-
-/* ===== SECTION TITLE ===== */
-#project .title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--color-accent);
-  margin-bottom: 2.5rem;
-  position: relative;
+  inset: 0;
+  pointer-events: none;
   z-index: 1;
 }
 
-/* ===== CONTENT WRAPPER ===== */
-#project .community__content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: relative;
-  z-index: 1;
-  text-align: left;
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.9), transparent);
+  border-radius: 50%;
+  opacity: 0.25;
+  filter: blur(2px);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
 }
 
-/* ===== LEFT & RIGHT SIDES ===== */
-#project .community__left,
-#project .community__right {
-  flex: 1 1 400px;
-  max-width: 600px;
+.title {
+  font-size: clamp(3.2rem, 7.5vw, 6.2rem);
+  text-align: center;
+  margin-bottom: 90px;
+  letter-spacing: -3.5px;
+  line-height: 1.05;
 }
 
-#project .community__left .sub__title,
-#project .community__right .sub__title {
-  font-size: 1.5rem;
+/* Content Grid */
+.community__content {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 70px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 920px) {
+  .community__content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+.sub__title {
+  font-size: 1.65rem;
   font-weight: 700;
-  color: var(--color-accent);
-  margin-bottom: 1rem;
+  margin-bottom: 24px;
+  background: linear-gradient(90deg, #ffd700, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-#project .community__left p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--color-white);
+/* Bento Glass Cards */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
 }
 
-/* ===== BENEFITS LIST ===== */
-#project .benefit__list {
-  list-style: none;
-  padding-left: 0;
-  font-size: 1.1rem;
-  line-height: 2;
-  color: var(--color-white);
-  font-family: sans-serif;
-}
-
-#project .benefit__list li::before {
-  content: '✓ ';
-  color: var(--color-accent);
-  font-weight: bold;
-  margin-right: 8px;
-  font-family: sans-serif;
-}
-
-/* ===== CTA BUTTON ===== */
-#project .explore__btn__wrapper {
-  text-align: center;
-  margin-top: 3rem;
+.glass-card {
   position: relative;
-  z-index: 1;
+  background: rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 24px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 25px 60px -20px rgba(0,0,0,0.7);
+  overflow: hidden;
+  transform-style: preserve-3d;
 }
 
-#project .explore__btn {
-  padding: 0.75rem 2.2rem;
-  font-size: 1rem;
-  background: var(--gradient-2);
-  border: none;
-  border-radius: var(--radius-1);
-  cursor: pointer;
-  font-weight: bold;
-  color: #000;
-  transition: all 0.4s ease;
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+.glass-card:hover {
+  border-color: #d4af37;
+  box-shadow: 0 35px 80px -15px rgba(212, 175, 55, 0.35);
+  transform: translateY(-12px);
 }
 
-#project .explore__btn:hover {
-  background: var(--gradient-1);
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+.benefit-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(212, 175, 55, 0.18), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.6s;
+  z-index: -1;
 }
 
-/* ===== SOCIAL LINKS STYLES ===== */
-.community__socials {
-  margin-top: 2.5rem;
+.glass-card:hover .benefit-glow {
+  opacity: 1;
+}
+
+.benefit-icon {
+  font-size: 2.2rem;
+  color: #d4af37;
+  filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.6));
+}
+
+.benefit-card p {
+  font-size: 1.08rem;
+  line-height: 1.68;
+  margin: 0;
+  color: #e0e0e0;
+}
+
+/* Premium Liquid CTA */
+.explore__btn__wrapper {
   text-align: center;
+  margin: 100px 0 70px;
 }
 
-.community__socials .social__icons {
+.premium-cta {
+  position: relative;
+  padding: 20px 52px;
+  font-size: 1.22rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #d4af37, #fff, #d4af37);
+  background-size: 200% 100%;
+  color: #111;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.premium-cta:hover {
+  transform: translateY(-8px) scale(1.06);
+  box-shadow: 0 25px 55px rgba(212, 175, 55, 0.55);
+}
+
+.cta-shine {
+  position: absolute;
+  top: -50%;
+  left: -150%;
+  width: 60%;
+  height: 300%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.7), transparent);
+  transition: left 0.8s;
+}
+
+.premium-cta:hover .cta-shine {
+  left: 200%;
+}
+
+/* Social Icons - Burst Glow */
+.social__icons {
   display: flex;
   justify-content: center;
+  gap: 22px;
+  margin-top: 28px;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1rem;
 }
 
-/* Base button styling */
 .social__btn {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.2rem;
-  border-radius: var(--radius-2);
-  background: var(--color-ui-primary);
-  color: var(--color-accent);
+  gap: 14px;
+  padding: 18px 34px;
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(212,175,55,0.25);
+  border-radius: 9999px;
+  color: #d4af37;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-  box-shadow: 0 0 10px rgba(234, 181, 7, 0.1);
+  transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 .social__btn:hover {
-  transform: scale(1.05);
-  background: var(--color-ui-secondary);
-  color: var(--color-white);
+  background: rgba(212,175,55,0.15);
+  color: #fff;
+  border-color: #d4af37;
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 0 0 40px rgba(212,175,55,0.5);
 }
 
 .social__btn svg {
-  font-size: 1.2rem;
-  color: var(--color-accent);
+  font-size: 1.55rem;
+  transition: transform 0.4s ease;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  #project .community__content {
-    flex-direction: column;
-    align-items: stretch;
-    text-align: center;
-    gap: 2rem;
-  }
+.social__btn:hover svg {
+  transform: scale(1.25) rotate(12deg);
+}
 
-  .community__socials .social__icons {
+.join-text {
+  text-align: center;
+  font-size: 1.15rem;
+  opacity: 0.85;
+  margin-bottom: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  .social__icons {
     flex-direction: column;
     align-items: center;
   }
-
-  .community__socials .social__icons a {
-    width: 100%;
-    max-width: 280px;
-    background: var(--color-ui-primary);
-    padding: 0.8rem 1rem;
-    border-radius: var(--radius-2);
-    font-size: 1rem;
-    box-shadow: 0 0 8px rgba(255,255,255,0.05);
-  }
-}
-
-/* Mobile-specific icon buttons */
-@media (max-width: 500px) {
-  .social__btn span {
-    display: none;
-  }
-
   .social__btn {
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    border-radius: 50%;
-    font-size: 1.3rem;
-    background: var(--color-ui-primary);
-  }
-
-  .social__btn svg {
-    color: #FFD700 !important;
-    font-size: 1.4rem;
+    width: 100%;
+    max-width: 340px;
+    justify-content: center;
   }
 }
