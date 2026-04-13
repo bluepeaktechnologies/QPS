@@ -4,6 +4,11 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 
+import physical from '../assets/physical_mentorship.jpeg';
+import online from '../assets/online_mentorship.jpeg';
+import trading from '../assets/Trading_Course.jpeg';
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Mentorship = () => {
@@ -16,7 +21,7 @@ const Mentorship = () => {
     {
       id: 1,
       title: "Physical Mentorship",
-      image: "https://picsum.photos/id/1015/800/600",
+      image: physical,
       category: "DTE",
       description: "Master technical analysis, risk management, psychology, and live trade execution with institutional-grade strategies.",
       duration: "6 Weeks",
@@ -26,7 +31,7 @@ const Mentorship = () => {
     {
       id: 2,
       title: "Online Mentorship",
-      image: "https://picsum.photos/id/106/800/600",
+      image: online,
       category: "DTE",
       description: "Master technical analysis, risk management, psychology, and live trade execution with institutional-grade strategies online.",
       duration: "4 Weeks",
@@ -36,7 +41,7 @@ const Mentorship = () => {
     {
       id: 3,
       title: "Course",
-      image: "https://picsum.photos/id/201/800/600",
+      image: trading,
       category: "DTE",
       description: "Subscribe to our course to master technical analysis, risk management, psychology, and live trade execution with institutional-grade strategies.",
       duration: "Downloadable Intrument",
