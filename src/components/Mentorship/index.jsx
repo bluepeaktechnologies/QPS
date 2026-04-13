@@ -15,38 +15,38 @@ const Mentorship = () => {
   const mentorships = [
     {
       id: 1,
-      title: "Trading Mastery Course",
+      title: "Physical Mentorship",
       image: "https://picsum.photos/id/1015/800/600",
-      category: "Stocks & Indices",
+      category: "DTE",
       description: "Master technical analysis, risk management, psychology, and live trade execution with institutional-grade strategies.",
-      duration: "8 Weeks",
-      level: "Intermediate",
+      duration: "6 Weeks",
+      level: "Beginner, Intermediate & Advance",
       accent: "#00ff9d",
     },
     {
       id: 2,
-      title: "Forex Elite Mentorship",
+      title: "Online Mentorship",
       image: "https://picsum.photos/id/106/800/600",
-      category: "Forex",
-      description: "Institutional smart money concepts, order flow, and advanced multi-timeframe strategies with weekly live reviews.",
-      duration: "12 Weeks",
+      category: "DTE",
+      description: "Master technical analysis, risk management, psychology, and live trade execution with institutional-grade strategies online.",
+      duration: "4 Weeks",
       level: "All Levels",
       accent: "#00b4ff",
     },
     {
       id: 3,
-      title: "Crypto Alpha Program",
+      title: "Course",
       image: "https://picsum.photos/id/201/800/600",
-      category: "Cryptocurrency",
-      description: "On-chain analysis, DeFi yield strategies, portfolio construction, and high-conviction altcoin hunting.",
-      duration: "6 Weeks",
+      category: "DTE",
+      description: "Subscribe to our course to master technical analysis, risk management, psychology, and live trade execution with institutional-grade strategies.",
+      duration: "Downloadable Intrument",
       level: "Beginner → Advanced",
       accent: "#ff00c3",
     },
   ];
 
   const handleEnroll = () => {
-    window.open('https://wa.me/234XXXXXXXXXX', '_blank'); // ← Replace with your WhatsApp number (country code)
+    window.open('https://wa.me/2349120810735?text=Hello%2C%20I%20want%20to%20purchase%20the%20Mentorship%20Program', '_blank'); // ← Replace with your WhatsApp number (country code)
   };
 
   // Advanced 3D Magnetic Tilt

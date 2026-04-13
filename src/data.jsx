@@ -20,7 +20,7 @@ export const navTabs = [
 
 export const services = [
   {
-    name:" Digital Trading Education",
+    name:" Digital Trading Education (DTE)",
     icon:<SiBlueprint/>,
     description:`Build strong trading skills through our structured forex 
     training program. Learn chart analysis, risk control, market psychology, 
@@ -149,7 +149,7 @@ export const contacts = [
   },
   {
     name:"Address",
-    value:"NO.1 Dunukofia Street, Abuja.",
+    value:"Stack and Hustle Plot 436 Ali Muhammad Zarah St, Central Business District, Abuja 900103",
     icon:<IoLocationOutline/>,
   },
 ];
